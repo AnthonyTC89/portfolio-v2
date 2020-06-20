@@ -1,0 +1,43 @@
+{
+  "AboutInfo": {
+    "title": "About section"
+  },
+  "NavbarInfo" : {
+    "about": "About me",
+    "contact": "Contact",
+    "products": "Products",
+    "services": "Services"
+  },
+  "BannerInfo": {
+    "title": "Banner section",
+    "banner": {
+      "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/banner.jpg",
+      "key": "banner",
+      "title": "",
+      "subtitle": "",
+      "caption": "",
+      "body": ""
+    }
+  },
+  "ContactInfo": {
+    "title": "Contact section"
+  },
+  "SocialNetworksInfo": {
+    "title": "Social Networks"
+  },
+  "FooterInfo": {
+    "authorName": "AnthonyTC89",
+    "authorUrl": "https://github.com/AnthonyTC89",
+    "copyright": "All Rights Reserved."
+  },
+  "buttons": {
+    "login": "Login",
+    "add": "Create",
+    "update": "Update",
+    "wait" : "Wait...",
+    "create": "Create",
+    "back": "Back",
+    "upload": "Upload",
+    "select": "Select"
+  }
+}

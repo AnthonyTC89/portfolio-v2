@@ -1,13 +1,8 @@
 import React from 'react';
+import Home from './Home';
 
-function App() {
-  return (
-    <div>
-      <header>
-        React
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Home />
+);
 
 export default App;
