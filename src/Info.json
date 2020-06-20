@@ -3,10 +3,16 @@
     "title": "About section"
   },
   "NavbarInfo" : {
+    "home": "Home",
     "about": "About me",
-    "contact": "Contact",
-    "products": "Products",
-    "services": "Services"
+    "contact": "Contact me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "logo": {
+      "location": "https://website-atc.s3.amazonaws.com/material-ui.png",
+      "key": "material-ui"
+    }
   },
   "BannerInfo": {
     "title": "Banner section",

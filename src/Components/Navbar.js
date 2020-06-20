@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
   const classes = useStyles();
-  const { about, contact, products, services, text, logo } = NavbarInfo;
+  const { home, about, contact, experience, projects, education, text, logo } = NavbarInfo;
 
   return (
     <AppBar position="fixed" className={classes.root} color="inherit">
@@ -47,13 +47,19 @@ const Navbar = () => {
         <Grid container className={classes.container}>
           <Hidden xsDown>
             <Link href="#products" color="inherit" className={classes.link}>
-              {products}
+              {home}
             </Link>
             <Divider orientation="vertical" flexItem />
           </Hidden>
           <Hidden smDown>
             <Link href="#about" color="inherit" className={classes.link}>
               {about}
+            </Link>
+            <Divider orientation="vertical" flexItem />
+          </Hidden>
+          <Hidden smDown>
+            <Link href="#about" color="inherit" className={classes.link}>
+              {contact}
             </Link>
             <Divider orientation="vertical" flexItem />
           </Hidden>
@@ -65,13 +71,19 @@ const Navbar = () => {
           <Hidden smDown>
             <Divider orientation="vertical" flexItem />
             <Link href="#contact" color="inherit" className={classes.link}>
-              {contact}
+              {experience}
+            </Link>
+          </Hidden>
+          <Hidden smDown>
+            <Divider orientation="vertical" flexItem />
+            <Link href="#contact" color="inherit" className={classes.link}>
+              {projects}
             </Link>
           </Hidden>
           <Hidden xsDown>
             <Divider orientation="vertical" flexItem />
             <Link href="#services" color="inherit" className={classes.link}>
-              {services}
+              {education}
             </Link>
           </Hidden>
         </Grid>
