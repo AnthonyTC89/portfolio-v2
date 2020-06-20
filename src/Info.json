@@ -28,7 +28,29 @@
   "FooterInfo": {
     "authorName": "AnthonyTC89",
     "authorUrl": "https://github.com/AnthonyTC89",
-    "copyright": "All Rights Reserved."
+    "copyright": "All Rights Reserved.",
+    "socialNetworks": [
+      {
+        "name": "facebook",
+        "src": "https://img.icons8.com/color/48/000000/facebook.png",
+        "href": "https://www.facebook.com/anthonytapiac"
+      },
+      {
+        "name": "twitter",
+        "src": "https://img.icons8.com/color/48/000000/twitter.png",
+        "href": "https://twitter.com/ptonypTC"
+      },
+      {
+        "name": "linkedin",
+        "src": "https://img.icons8.com/color/48/000000/linkedin.png",
+        "href": "https://www.linkedin.com/in/anthony-tapia-cossio/"
+      },
+      {
+        "name": "github",
+        "src": "https://img.icons8.com/material-sharp/48/000000/github.png",
+        "href": "https://github.com/AnthonyTC89"
+      }
+    ]
   },
   "buttons": {
     "login": "Login",
