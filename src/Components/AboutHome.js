@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   img: {
-    width: '60%',
+    width: '80%',
     boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
   },
   columnText: {
@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   columnImg: {
+    padding: '1rem 1rem 2rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -75,6 +76,13 @@ const AboutHome = () => {
             {about.title}
           </Typography>
         </Grid>
+        <Grid item xs={12} md={6} className={classes.columnImg}>
+          <Grow in timeout={3000}>
+            <picture className={classes.picture}>
+              <img className={classes.img} src={about.location} alt={about.key} />
+            </picture>
+          </Grow>
+        </Grid>
         <Grid item xs={12} md={6} className={classes.columnText}>
           <Typography
             className={classes.text}
@@ -94,13 +102,6 @@ const AboutHome = () => {
               </Button>
             ))}
           </div>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.columnImg}>
-          <Grow in timeout={3000}>
-            <picture className={classes.picture}>
-              <img className={classes.img} src={about.location} alt={about.key} />
-            </picture>
-          </Grow>
         </Grid>
       </Grid>
     </Slide>

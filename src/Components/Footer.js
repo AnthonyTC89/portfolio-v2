@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     paddingBottom: '1rem',
     bottom: 0,
     width: '100%',
+    background: '#F2F9FF',
   },
   list: {
     display: 'flex',
@@ -28,7 +29,7 @@ const useStyles = makeStyles({
 const Footer = () => {
   const classes = useStyles();
   const year = new Date().getFullYear();
-  const { copyright, socialNetworks } = FooterInfo;
+  const { authorName, copyright, socialNetworks } = FooterInfo;
 
   return (
     <footer className={classes.footer}>
@@ -49,7 +50,7 @@ const Footer = () => {
       )}
       <Container maxWidth="sm">
         <Typography variant="body2" color="textSecondary" align="center">
-          {`${year} © Website` }
+          {`${year} © ${authorName}` }
         </Typography>
         <Typography variant="body2" color="textSecondary" align="center">
           {copyright}
