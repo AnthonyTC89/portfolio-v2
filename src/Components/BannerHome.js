@@ -51,7 +51,7 @@ const Banner = () => {
 
   return (
     <Grow in timeout={2500}>
-      <section className={classes.root} id="home">
+      <section className={classes.root}>
         <picture className={classes.picture}>
           <img className={classes.img} src={banner.location} alt={banner.key} />
         </picture>
