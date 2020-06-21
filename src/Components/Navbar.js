@@ -38,11 +38,6 @@ const useStyles = makeStyles({
   },
 });
 
-// const Components = {
-//   BannerHome,
-//   AboutHome,
-// };
-
 const Navbar = ({ setComponent }) => {
   const classes = useStyles();
   const { home, about, contact, experience, projects, education, text, logo } = NavbarInfo;
@@ -60,7 +55,7 @@ const Navbar = ({ setComponent }) => {
         <Grid container className={classes.container}>
           <Hidden xsDown>
             <Button
-              onClick={() => handleComponent(BannerHome)}
+              onClick={() => setComponent(<BannerHome />)}
               color="primary"
               className={classes.link}
             >
@@ -70,7 +65,7 @@ const Navbar = ({ setComponent }) => {
           </Hidden>
           <Hidden smDown>
             <Button
-              onClick={() => handleComponent(AboutHome)}
+              onClick={() => setComponent(<AboutHome />)}
               color="primary"
               className={classes.link}
             >

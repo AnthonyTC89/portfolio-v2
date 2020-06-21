@@ -3,14 +3,14 @@ import { v4 as uuidv4 } from 'uuid';
 import Button from '@material-ui/core/Button';
 import Grow from '@material-ui/core/Grow';
 import Grid from '@material-ui/core/Grid';
+import Slide from '@material-ui/core/Slide';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { AboutInfo } from '../Info.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: '2rem auto',
-    padding: '2rem',
+    padding: '4rem 1rem',
     background: '#F2F9FF',
     textAlign: 'center',
   },
@@ -68,11 +68,13 @@ const AboutHome = () => {
   const { about, skills } = AboutInfo;
 
   return (
-    <section className={classes.root} id="about">
-      <Typography className={classes.title} variant="h2">
-        {about.title}
-      </Typography>
-      <Grid container spacing={3}>
+    <Slide direction="right" in timeout={1000}>
+      <Grid component="section" container className={classes.root}>
+        <Grid item xs={12}>
+          <Typography className={classes.title} variant="h2">
+            {about.title}
+          </Typography>
+        </Grid>
         <Grid item xs={12} md={6} className={classes.columnText}>
           <Typography
             className={classes.text}
@@ -94,14 +96,14 @@ const AboutHome = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={6} className={classes.columnImg}>
-          <Grow in timeout={2000} appear>
+          <Grow in timeout={3000}>
             <picture className={classes.picture}>
               <img className={classes.img} src={about.location} alt={about.key} />
             </picture>
           </Grow>
         </Grid>
       </Grid>
-    </section>
+    </Slide>
   );
 };
 
