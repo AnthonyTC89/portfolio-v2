@@ -1,5 +1,6 @@
 /* eslint-disable object-curly-newline */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -7,8 +8,11 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Link from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
 import HomeIcon from '@material-ui/icons/Home';
 import Hidden from '@material-ui/core/Hidden';
+import BannerHome from './BannerHome';
+import AboutHome from './AboutHome';
 import { NavbarInfo } from '../Info.json';
 
 const useStyles = makeStyles({
@@ -34,9 +38,18 @@ const useStyles = makeStyles({
   },
 });
 
-const Navbar = () => {
+// const Components = {
+//   BannerHome,
+//   AboutHome,
+// };
+
+const Navbar = ({ setComponent }) => {
   const classes = useStyles();
   const { home, about, contact, experience, projects, education, text, logo } = NavbarInfo;
+
+  const handleComponent = (Component) => {
+    setComponent(<Component />);
+  };
 
   return (
     <AppBar position="fixed" className={classes.root} color="inherit">
@@ -46,21 +59,33 @@ const Navbar = () => {
         </Typography>
         <Grid container className={classes.container}>
           <Hidden xsDown>
-            <Link href="#products" color="inherit" className={classes.link}>
+            <Button
+              onClick={() => handleComponent(BannerHome)}
+              color="primary"
+              className={classes.link}
+            >
               {home}
-            </Link>
+            </Button>
             <Divider orientation="vertical" flexItem />
           </Hidden>
           <Hidden smDown>
-            <Link href="#about" color="inherit" className={classes.link}>
+            <Button
+              onClick={() => handleComponent(AboutHome)}
+              color="primary"
+              className={classes.link}
+            >
               {about}
-            </Link>
+            </Button>
             <Divider orientation="vertical" flexItem />
           </Hidden>
           <Hidden smDown>
-            <Link href="#about" color="inherit" className={classes.link}>
+            <Button
+              onClick={() => handleComponent(AboutHome)}
+              color="primary"
+              className={classes.link}
+            >
               {contact}
-            </Link>
+            </Button>
             <Divider orientation="vertical" flexItem />
           </Hidden>
           <Link href="#home" color="inherit" className={classes.link}>
@@ -70,26 +95,42 @@ const Navbar = () => {
           </Link>
           <Hidden smDown>
             <Divider orientation="vertical" flexItem />
-            <Link href="#contact" color="inherit" className={classes.link}>
+            <Button
+              onClick={() => handleComponent(AboutHome)}
+              color="primary"
+              className={classes.link}
+            >
               {experience}
-            </Link>
+            </Button>
           </Hidden>
           <Hidden smDown>
             <Divider orientation="vertical" flexItem />
-            <Link href="#contact" color="inherit" className={classes.link}>
+            <Button
+              onClick={() => handleComponent(AboutHome)}
+              color="primary"
+              className={classes.link}
+            >
               {projects}
-            </Link>
+            </Button>
           </Hidden>
           <Hidden xsDown>
             <Divider orientation="vertical" flexItem />
-            <Link href="#services" color="inherit" className={classes.link}>
+            <Button
+              onClick={() => handleComponent(AboutHome)}
+              color="primary"
+              className={classes.link}
+            >
               {education}
-            </Link>
+            </Button>
           </Hidden>
         </Grid>
       </Toolbar>
     </AppBar>
   );
+};
+
+Navbar.propTypes = {
+  setComponent: PropTypes.func.isRequired,
 };
 
 export default Navbar;
