@@ -32,7 +32,11 @@
     }
   },
   "ContactInfo": {
-    "title": "Contact section"
+    "title": "Contact me",
+    "image": {
+      "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/contact.jpg",
+      "key": "contact"
+    }
   },
   "SocialNetworksInfo": {
     "title": "Social Networks"
@@ -72,6 +76,7 @@
     "create": "Create",
     "back": "Back",
     "upload": "Upload",
-    "select": "Select"
+    "select": "Select",
+    "submit": "Submit"
   }
 }

@@ -13,6 +13,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Hidden from '@material-ui/core/Hidden';
 import BannerHome from './BannerHome';
 import AboutHome from './AboutHome';
+import ContactHome from './ContactHome';
 import { NavbarInfo } from '../Info.json';
 
 const useStyles = makeStyles({
@@ -75,7 +76,7 @@ const Navbar = ({ setComponent }) => {
           </Hidden>
           <Hidden smDown>
             <Button
-              onClick={() => handleComponent(AboutHome)}
+              onClick={() => handleComponent(ContactHome)}
               color="primary"
               className={classes.link}
             >
