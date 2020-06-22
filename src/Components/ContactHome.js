@@ -78,7 +78,7 @@ const ContactHome = () => {
     setLoading(true);
     setMessage(null);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       setMessage('Thank you!');
       setEmail(emptyEmail);
     } catch (err) {

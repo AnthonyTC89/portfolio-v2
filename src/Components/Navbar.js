@@ -14,6 +14,7 @@ import Hidden from '@material-ui/core/Hidden';
 import BannerHome from './BannerHome';
 import AboutHome from './AboutHome';
 import ContactHome from './ContactHome';
+import ProjectsHome from './ProjectsHome';
 import { NavbarInfo } from '../Info.json';
 
 const useStyles = makeStyles({
@@ -92,7 +93,7 @@ const Navbar = ({ setComponent }) => {
           <Hidden smDown>
             <Divider orientation="vertical" flexItem />
             <Button
-              onClick={() => handleComponent(AboutHome)}
+              onClick={() => handleComponent(ProjectsHome)}
               color="primary"
               className={classes.link}
             >
@@ -102,7 +103,7 @@ const Navbar = ({ setComponent }) => {
           <Hidden smDown>
             <Divider orientation="vertical" flexItem />
             <Button
-              onClick={() => handleComponent(AboutHome)}
+              onClick={() => handleComponent(ProjectsHome)}
               color="primary"
               className={classes.link}
             >

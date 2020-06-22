@@ -38,6 +38,74 @@
       "key": "contact"
     }
   },
+  "ProjectsInfo": {
+    "title": "My Projects",
+    "projects": [
+      {
+        "title": "My WebSite",
+        "description": "This is a Personal Project with a DashBoard create with Material-UI. All the sections are editable in the admin Panel. There is a collection of images managed with AWS S3. The website can set a position of GoogleMaps. Products, Services and Social Networks can be created, edited and removed.",
+        "live": "https://website-atc.herokuapp.com/",
+        "source": "https://github.com/AnthonyTC89/website-atc",
+        "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/website-atc/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/website-atc/develop/screenshots/02.png"],
+        "pinned": true,
+        "skills": ["CSS", "React", "Material-UI", "Redux", "RoR", "Heroku", "AWS", "GoogleMaps"],
+        "mobile": false
+      },
+      {
+        "title": "Moodle-Pedagogic-School",
+        "description": "This project is a Moodle for a pedagogic school in Peru. A user can create an account of a student in the website. The administrator can update the account of a user to be a professor. A professor can create courses, subjects, schedules, upload documents in the Website. A student can view the courses, subjects, schedules and download the documents. There is guest account to have a view of the courses with less options.",
+        "live": "https://moodle-pedagogico.herokuapp.com/",
+        "source": "https://github.com/AnthonyTC89/moodle",
+        "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/moodle/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/moodle/develop/screenshots/02.png"],
+        "pinned": true,
+        "skills": ["CSS", "Bootstrap", "React", "Redux", "RoR", "Heroku", "AWS"],
+        "mobile": false
+      },
+      {
+        "title": "Hassana Massages and Health",
+        "description": "Web Site build for a Business in Peru. The Page show the information about the business, services, products, testimonials and contact of the owner. The Site has a 'CMS' where an Administrator can create, update or delete what the owner needs.",
+        "live": "https://hassana-masaje-salud.herokuapp.com/",
+        "source": "https://github.com/AnthonyTC89/hassana",
+        "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/hassana/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/hassana/develop/screenshots/02.png"],
+        "pinned": true,
+        "skills": ["CSS", "Bootstrap", "React", "Redux", "RoR", "Heroku", "AWS", "GoogleMaps"],
+        "mobile": false
+      },
+      {
+        "title": "Events",
+        "description": "Personal Project where a user can create an account and select the events that he wants. The events will be order by date. A super user can create new events in new dates or update what were created.\nAn administrator can manage all users and create new super users.",
+        "live": "https://react-rails-events.herokuapp.com/",
+        "source": "https://github.com/AnthonyTC89/react-rails-events",
+        "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/react-rails-events/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/react-rails-events/develop/screenshots/02.png"],
+        "pinned": true,
+        "skills": ["Bootstrap", "React", "Redux", "RoR", "Heroku"],
+        "mobile": true
+      },
+      {
+        "title": "Odonto App",
+        "description": "Real Web application built for students of a University where is showed the teeth and is possible to select each teeth to know the description of each face.",
+        "live": "https://raw.githack.com/AnthonyTC89/odonto_app_uap/develop/index.html",
+        "source": "https://github.com/AnthonyTC89/odonto_app_uap",
+        "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/odonto_app_uap/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/odonto_app_uap/develop/screenshots/02.png"],
+        "pinned": true,
+        "skills": ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP"],
+        "mobile": false
+      },
+      {
+        "title": "NewsWeek Clone",
+        "description": "Personal Project based in a popular Website. This WebPage is a layout with many sections about news, editor picks, magazine and amazing footer.",
+        "live": "https://anthonytc89.github.io/newsweek-clone/",
+        "source": "https://github.com/AnthonyTC89/newsweek-clone",
+        "screenshots": [
+          "https://raw.githubusercontent.com/AnthonyTC89/newsweek-clone/develop/screenshots/01.png",
+          "https://raw.githubusercontent.com/AnthonyTC89/newsweek-clone/develop/screenshots/02.png"
+        ],
+        "pinned": true,
+        "skills": ["HTML", "CSS", "Bootstrap"],
+        "mobile": false
+      }
+    ]
+  },
   "SocialNetworksInfo": {
     "title": "Social Networks"
   },
@@ -78,5 +146,26 @@
     "upload": "Upload",
     "select": "Select",
     "submit": "Submit"
+  },
+  "UrlIcons": {
+    "HTML": "https://img.icons8.com/color/48/000000/html-5.png",
+    "CSS": "https://img.icons8.com/color/50/000000/css3.png",
+    "Bootstrap": "https://img.icons8.com/color/48/000000/bootstrap.png",
+    "JavaScript": "https://img.icons8.com/color/48/000000/javascript.png",
+    "nodeJS": "https://img.icons8.com/color/48/000000/nodejs.png",
+    "React": "https://img.icons8.com/plasticine/100/000000/react.png",
+    "Redux": "https://img.icons8.com/color/48/000000/redux.png",
+    "MongoDB": "https://img.icons8.com/color/48/000000/mongodb.png",
+    "PHP": "https://img.icons8.com/officel/40/000000/php-logo.png",
+    "Ruby": "https://img.icons8.com/office/40/000000/ruby-programming-language.png",
+    "RoR": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/rails-icon-23.jpg",
+    "PostgreSQL": "https://img.icons8.com/color/48/000000/postgreesql.png",
+    "Heroku": "https://img.icons8.com/color/48/000000/heroku.png",
+    "AWS": "https://img.icons8.com/color/48/000000/amazon-web-services.png",
+    "Java": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png",
+    "C#": "https://img.icons8.com/color/48/000000/c-sharp-logo.png",
+    "MSSQLServer": "https://www.freeiconspng.com/uploads/sql-server-icon-6.jpg",
+    "GoogleMaps": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/google_maps_icon.png",
+    "Material-UI": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/material-ui.png"
   }
 }
