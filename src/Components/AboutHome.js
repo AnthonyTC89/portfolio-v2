@@ -69,7 +69,7 @@ const AboutHome = () => {
   const { about, skills } = AboutInfo;
 
   return (
-    <Slide direction="right" in timeout={1000}>
+    <Slide direction="up" in timeout={1000}>
       <Grid component="section" container className={classes.root}>
         <Grid item xs={12}>
           <Typography className={classes.title} variant="h2">

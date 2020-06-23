@@ -21,12 +21,19 @@ const useStyles = makeStyles((theme) => ({
     margin: '1rem',
     color: theme.palette.primary.dark,
   },
+  links: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
   subtitle: {
-    display: 'contents',
     fontWeight: 300,
-    fontSize: '2em',
+    fontSize: '2rem',
     margin: '1rem',
     color: 'black',
+  },
+  caption: {
+    fontSize: '1rem',
   },
   picture: {
     width: '100%',
@@ -79,12 +86,14 @@ const AboutHome = () => {
           <Grid container key={uuidv4()} component="article" className={classes.row}>
             <Hidden mdUp>
               <Grid item xs={12}>
-                <Link className={classes.subtitle} href={item.live} target="_blank" rel="noreferrer">
-                  {item.title}
-                </Link>
-                <Link className={classes.link} href={item.source} target="_blank" rel="noreferrer">
-                  Source
-                </Link>
+                <Typography className={classes.links} variant="h2">
+                  <Link className={classes.subtitle} href={item.live} target="_blank" rel="noreferrer">
+                    {item.title}
+                  </Link>
+                  <Link className={classes.caption} href={item.source} target="_blank" rel="noreferrer">
+                    Source
+                  </Link>
+                </Typography>
               </Grid>
             </Hidden>
             <Grid item xs={12} md={6} className={classes.columnImg}>
@@ -96,12 +105,14 @@ const AboutHome = () => {
             </Grid>
             <Grid item xs={12} md={6} className={classes.columnInfo}>
               <Hidden smDown>
-                <Link className={classes.subtitle} href={item.live} target="_blank" rel="noreferrer">
-                  {item.title}
-                </Link>
-                <Link className={classes.link} href={item.source} target="_blank" rel="noreferrer">
-                  Source
-                </Link>
+                <Typography className={classes.links} variant="h2">
+                  <Link className={classes.subtitle} href={item.live} target="_blank" rel="noreferrer">
+                    {item.title}
+                  </Link>
+                  <Link className={classes.caption} href={item.source} target="_blank" rel="noreferrer">
+                    Source
+                  </Link>
+                </Typography>
               </Hidden>
               <ul className={classes.iconList}>
                 {item.skills.map((skill) => (
