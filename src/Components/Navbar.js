@@ -7,11 +7,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
-import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import HomeIcon from '@material-ui/icons/Home';
 import Hidden from '@material-ui/core/Hidden';
-import BannerHome from './BannerHome';
 import AboutHome from './AboutHome';
 import ContactHome from './ContactHome';
 import ProjectsHome from './ProjectsHome';
@@ -44,7 +42,7 @@ const useStyles = makeStyles({
 
 const Navbar = ({ setComponent }) => {
   const classes = useStyles();
-  const { home, about, contact, experience, projects, education, text, logo } = NavbarInfo;
+  const { contact, experience, projects, education, text } = NavbarInfo;
 
   const handleComponent = (Component) => {
     setComponent(<Component />);
@@ -57,27 +55,8 @@ const Navbar = ({ setComponent }) => {
           {text}
         </Typography>
         <Grid container className={classes.container}>
-          <Hidden xsDown>
-            <Button
-              onClick={() => handleComponent(BannerHome)}
-              color="primary"
-              className={classes.link}
-            >
-              {home}
-            </Button>
-            <Divider orientation="vertical" flexItem />
-          </Hidden>
           <Hidden smDown>
-            <Button
-              onClick={() => handleComponent(AboutHome)}
-              color="primary"
-              className={classes.link}
-            >
-              {about}
-            </Button>
             <Divider orientation="vertical" flexItem />
-          </Hidden>
-          <Hidden smDown>
             <Button
               onClick={() => handleComponent(ContactHome)}
               color="primary"
@@ -85,24 +64,8 @@ const Navbar = ({ setComponent }) => {
             >
               {contact}
             </Button>
-            <Divider orientation="vertical" flexItem />
           </Hidden>
-          <Link href="#home" color="inherit" className={classes.link}>
-            {logo.location == null ? <HomeIcon /> : (
-              <img className={classes.img} src={logo.location} alt={logo.key} />
-            )}
-          </Link>
-          <Hidden smDown>
-            <Divider orientation="vertical" flexItem />
-            <Button
-              onClick={() => handleComponent(ExperienceHome)}
-              color="primary"
-              className={classes.link}
-            >
-              {experience}
-            </Button>
-          </Hidden>
-          <Hidden smDown>
+          <Hidden xsDown>
             <Divider orientation="vertical" flexItem />
             <Button
               onClick={() => handleComponent(ProjectsHome)}
@@ -112,8 +75,25 @@ const Navbar = ({ setComponent }) => {
               {projects}
             </Button>
           </Hidden>
+          <Divider orientation="vertical" flexItem />
+          <Button
+            onClick={() => handleComponent(AboutHome)}
+            className={classes.link}
+          >
+            <HomeIcon color="primary" />
+          </Button>
+          <Divider orientation="vertical" flexItem />
           <Hidden xsDown>
+            <Button
+              onClick={() => handleComponent(ExperienceHome)}
+              color="primary"
+              className={classes.link}
+            >
+              {experience}
+            </Button>
             <Divider orientation="vertical" flexItem />
+          </Hidden>
+          <Hidden smDown>
             <Button
               onClick={() => handleComponent(EducationHome)}
               color="primary"
@@ -121,6 +101,7 @@ const Navbar = ({ setComponent }) => {
             >
               {education}
             </Button>
+            <Divider orientation="vertical" flexItem />
           </Hidden>
         </Grid>
       </Toolbar>

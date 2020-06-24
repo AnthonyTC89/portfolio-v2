@@ -73,11 +73,6 @@ const AboutHome = () => {
   return (
     <Slide direction="up" in timeout={1000}>
       <Grid component="section" container className={classes.root}>
-        <Grid item xs={12}>
-          <Typography className={classes.title} variant="h2">
-            {about.title}
-          </Typography>
-        </Grid>
         <Grid item xs={12} md={6} className={classes.columnImg}>
           <Grow in timeout={3000}>
             <picture className={classes.picture}>
@@ -86,6 +81,9 @@ const AboutHome = () => {
           </Grow>
         </Grid>
         <Grid item xs={12} md={6} className={classes.columnText}>
+          <Typography className={classes.title} variant="h2">
+            {about.title}
+          </Typography>
           <Typography
             className={classes.text}
             component="article"

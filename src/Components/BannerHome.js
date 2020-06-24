@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     width: '100%',
   },
   img: {
-    width: '100%',
+    height: window.innerHeight,
   },
   text: {
     position: 'absolute',

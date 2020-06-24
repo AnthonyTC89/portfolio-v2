@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../Components/Navbar';
-import BannerHome from '../Components/BannerHome';
+import AboutHome from '../Components/AboutHome';
 import Footer from '../Components/Footer';
 
 const Home = () => {
-  const [Component, setComponent] = useState(<BannerHome />);
+  const [Component, setComponent] = useState(<AboutHome />);
   return (
     <>
       <Navbar setComponent={setComponent} />

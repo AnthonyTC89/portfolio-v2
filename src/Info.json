@@ -11,13 +11,13 @@
   "NavbarInfo" : {
     "home": "Home",
     "about": "About me",
-    "contact": "Contact me",
+    "contact": "Contact",
     "experience": "Experience",
     "projects": "Projects",
     "education": "Education",
     "logo": {
-      "location": "https://website-atc.s3.amazonaws.com/material-ui.png",
-      "key": "material-ui"
+      "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/logo.png",
+      "key": "portfolio-logo"
     }
   },
   "BannerInfo": {
