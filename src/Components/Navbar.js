@@ -15,6 +15,7 @@ import BannerHome from './BannerHome';
 import AboutHome from './AboutHome';
 import ContactHome from './ContactHome';
 import ProjectsHome from './ProjectsHome';
+import ExperienceHome from './ExperienceHome';
 import { NavbarInfo } from '../Info.json';
 
 const useStyles = makeStyles({
@@ -57,7 +58,7 @@ const Navbar = ({ setComponent }) => {
         <Grid container className={classes.container}>
           <Hidden xsDown>
             <Button
-              onClick={() => setComponent(<BannerHome />)}
+              onClick={() => handleComponent(BannerHome)}
               color="primary"
               className={classes.link}
             >
@@ -67,7 +68,7 @@ const Navbar = ({ setComponent }) => {
           </Hidden>
           <Hidden smDown>
             <Button
-              onClick={() => setComponent(<AboutHome />)}
+              onClick={() => handleComponent(AboutHome)}
               color="primary"
               className={classes.link}
             >
@@ -93,7 +94,7 @@ const Navbar = ({ setComponent }) => {
           <Hidden smDown>
             <Divider orientation="vertical" flexItem />
             <Button
-              onClick={() => handleComponent(ProjectsHome)}
+              onClick={() => handleComponent(ExperienceHome)}
               color="primary"
               className={classes.link}
             >

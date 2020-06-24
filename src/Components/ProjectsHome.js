@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '4rem 1rem',
     background: '#F2F9FF',
     textAlign: 'center',
+    minHeight: window.innerHeight,
   },
   title: {
     fontWeight: 400,
@@ -117,7 +118,9 @@ const AboutHome = () => {
               <ul className={classes.iconList}>
                 {item.skills.map((skill) => (
                   <li key={uuidv4()}>
-                    <img src={UrlIcons[skill]} alt="icon-skill" className={classes.icon} />
+                    <Grow in timeout={4000}>
+                      <img src={UrlIcons[skill]} alt="icon-skill" className={classes.icon} />
+                    </Grow>
                   </li>
                 ))}
               </ul>

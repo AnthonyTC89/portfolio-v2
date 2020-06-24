@@ -106,8 +106,30 @@
       }
     ]
   },
-  "SocialNetworksInfo": {
-    "title": "Social Networks"
+  "ExperienceInfo": {
+    "title": "My work experience",
+    "experience": [
+      {
+        "date": "May 2016 - December 2018",
+        "company": "Andean University",
+        "href": "https://uancv.edu.pe/",
+        "skills": ["HTML","C#", "SQL"],
+        "position": "Software Developer",
+        "goals": "Get, process, manage and report information.",
+        "industry": "Education",
+        "image": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/education.jpg"
+      },
+      {
+        "date": "July 2011 - June 2012",
+        "company": "BanTotal",
+        "href": "https://www.bantotal.com/en/",
+        "skills": ["Java", "SQL"],
+        "position": "Software Developer",
+        "goals": "Build functions according to new requirements.",
+        "industry": "Finances",
+        "image": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/finances.png"
+      }
+    ]
   },
   "FooterInfo": {
     "authorName": "AnthonyTC89",
@@ -166,6 +188,7 @@
     "C#": "https://img.icons8.com/color/48/000000/c-sharp-logo.png",
     "MSSQLServer": "https://www.freeiconspng.com/uploads/sql-server-icon-6.jpg",
     "GoogleMaps": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/google_maps_icon.png",
-    "Material-UI": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/material-ui.png"
+    "Material-UI": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/material-ui.png",
+    "SQL": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/sql-icon.png"
   }
 }

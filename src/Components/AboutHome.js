@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '4rem 1rem',
     background: '#F2F9FF',
     textAlign: 'center',
+    minHeight: window.innerHeight,
   },
   title: {
     fontWeight: 400,
