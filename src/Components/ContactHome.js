@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grow from '@material-ui/core/Grow';
@@ -54,8 +55,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const emptyEmail = {
-  from: '',
-  body: '',
+  from_email: '',
+  to_name: 'AnthonyTC',
+  message_html: '',
 };
 
 const ContactHome = () => {
@@ -78,7 +80,10 @@ const ContactHome = () => {
     setLoading(true);
     setMessage(null);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const userID = 'user_rNvpe3qVkqG4Htik4Ehnc';
+      const serviceID = 'gmail';
+      const templateID = 'template_portfolio_v2';
+      await emailjs.send(serviceID, templateID, email, userID);
       setMessage('Thank you!');
       setEmail(emptyEmail);
     } catch (err) {
@@ -106,10 +111,10 @@ const ContactHome = () => {
           <form onSubmit={handleSubmit} className={classes.form}>
             <TextField
               margin="dense"
-              name="from"
+              name="from_email"
               variant="outlined"
-              id="from"
-              value={email.from}
+              id="from_email"
+              value={email.from_email}
               label="email"
               onChange={handleChange}
             />
@@ -117,11 +122,11 @@ const ContactHome = () => {
               margin="dense"
               multiline
               rows="8"
-              name="body"
+              name="message_html"
               variant="outlined"
-              id="body"
-              value={email.body}
-              label="body"
+              id="message_html"
+              value={email.message_html}
+              label="type here"
               onChange={handleChange}
             />
             <Button
