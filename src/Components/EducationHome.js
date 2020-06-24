@@ -6,7 +6,7 @@ import Link from '@material-ui/core/Link';
 import Slide from '@material-ui/core/Slide';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { ExperienceInfo, UrlIcons } from '../Info.json';
+import { EducationInfo } from '../Info.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,8 +40,9 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
-    maxHeight: '10rem',
+    maxHeight: '5rem',
     maxWidth: '90%',
+    margin: '1rem',
   },
   columnInfo: {
     display: 'flex',
@@ -67,13 +68,13 @@ const useStyles = makeStyles((theme) => ({
     padding: '0 1rem',
   },
   icon: {
-    width: '3rem',
+    width: '2rem',
   },
 }));
 
-const ExperienceHome = () => {
+const EducationHome = () => {
   const classes = useStyles();
-  const { title, experience } = ExperienceInfo;
+  const { title, education } = EducationInfo;
   return (
     <Slide direction="up" in timeout={1000}>
       <Grid component="section" container className={classes.root}>
@@ -82,28 +83,24 @@ const ExperienceHome = () => {
             {title}
           </Typography>
         </Grid>
-        {experience.map((item) => (
+        {education.map((item) => (
           <Grid key={uuidv4()} item xs={12} md={6} component="article">
             <Typography variant="caption">
               {item.date}
             </Typography>
             <Typography variant="h4">
               <Link className={classes.subtitle} href={item.href} target="_blank" rel="noreferrer">
-                {item.company}
+                {item.institution}
               </Link>
             </Typography>
+            <Grow in timeout={3000}>
+              <picture className={classes.picture}>
+                <img className={classes.img} src={item.image} alt={item.institution} />
+              </picture>
+            </Grow>
             <Typography variant="h6">
-              {item.position}
+              {item.grade}
             </Typography>
-            <ul className={classes.iconList}>
-              {item.skills.map((skill) => (
-                <li key={uuidv4()}>
-                  <Grow in timeout={4000}>
-                    <img src={UrlIcons[skill]} alt="icon-skill" className={classes.icon} />
-                  </Grow>
-                </li>
-              ))}
-            </ul>
             <Typography variant="body2">
               {item.goals}
             </Typography>
@@ -114,4 +111,4 @@ const ExperienceHome = () => {
   );
 };
 
-export default ExperienceHome;
+export default EducationHome;

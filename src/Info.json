@@ -3,10 +3,10 @@
     "about" : {
       "title": "About me",
       "text": "Full Stack Web Developer with 3+ years of experience working with a variety of back-end technologies seeking my next remote opportunity. Driven to help people make their lives or businesses easier, I thrive working on new challenges, knowing that everything can be achieved step-by-step. When I'm not coding, you can find me reading a book or playing a guitar.",
-      "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/about.jpg",
+      "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/gravatar.png",
       "key": "anthony-tapia"
     },
-    "skills": ["HTML", "CSS", "Bootstrap", "JavaScript", "React", "Material-UI", "Redux", "Jest", "Express", "NodeJS", "MongoDB", "ESLint", "Ruby", "RoR", "RailsAPI", "Rspec", "SQL", "MySql", "PostgreSQL", "Git", "Heroku", "C#", "AWS S3"]
+    "skills": ["HTML", "CSS", "Bootstrap", "JavaScript", "React", "Material-UI", "Redux", "Jest", "Express", "NodeJS", "MongoDB", "ESLint", "Ruby", "RoR", "RailsAPI", "Rspec", "SQL", "MySql", "PostgreSQL", "Git", "Heroku", "C#", "Java", "AWS S3"]
   },
   "NavbarInfo" : {
     "home": "Home",
@@ -107,7 +107,7 @@
     ]
   },
   "ExperienceInfo": {
-    "title": "My work experience",
+    "title": "My Work Experience",
     "experience": [
       {
         "date": "May 2016 - December 2018",
@@ -128,6 +128,27 @@
         "goals": "Build functions according to new requirements.",
         "industry": "Finances",
         "image": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/finances.png"
+      }
+    ]
+  },
+  "EducationInfo": {
+    "title": "My Education",
+    "education" : [
+      {
+        "date": "July 2019 - Abril 2020",
+        "institution": "Microverse",
+        "href": "https://www.microverse.org/",
+        "image": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/microverse.png",
+        "grade": "Web Developer",
+        "goals": "Full-Stack Development"
+      },
+      {
+        "date": "Abril 2007 - December 2012",
+        "institution": "Santa Maria Catholic University",
+        "href": "https://www.ucsm.edu.pe/",
+        "image": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/ucsm.png",
+        "grade": "Bachelor Systems Engineering",
+        "goals": "Programming. Algorithms. Data Structures."
       }
     ]
   },

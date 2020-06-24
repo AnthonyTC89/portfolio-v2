@@ -25,8 +25,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   img: {
-    width: '80%',
+    width: '70%',
     boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
+    borderRadius: '50%',
   },
   columnText: {
     display: 'flex',

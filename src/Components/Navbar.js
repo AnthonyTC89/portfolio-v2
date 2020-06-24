@@ -16,6 +16,7 @@ import AboutHome from './AboutHome';
 import ContactHome from './ContactHome';
 import ProjectsHome from './ProjectsHome';
 import ExperienceHome from './ExperienceHome';
+import EducationHome from './EducationHome';
 import { NavbarInfo } from '../Info.json';
 
 const useStyles = makeStyles({
@@ -114,7 +115,7 @@ const Navbar = ({ setComponent }) => {
           <Hidden xsDown>
             <Divider orientation="vertical" flexItem />
             <Button
-              onClick={() => handleComponent(AboutHome)}
+              onClick={() => handleComponent(EducationHome)}
               color="primary"
               className={classes.link}
             >
