@@ -1,17 +1,21 @@
+/* eslint-disable object-curly-newline */
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
 import Grow from '@material-ui/core/Grow';
 import Grid from '@material-ui/core/Grid';
 import Slide from '@material-ui/core/Slide';
 import Typography from '@material-ui/core/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { makeStyles } from '@material-ui/core/styles';
+import GoogleMaps from './GoogleMaps';
 import { buttons, ContactInfo } from '../Info.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '4rem 1rem',
+    padding: '5rem 1rem',
     background: '#F2F9FF',
     textAlign: 'center',
   },
@@ -24,16 +28,8 @@ const useStyles = makeStyles((theme) => ({
   picture: {
     width: '100%',
   },
-  img: {
-    width: '70%',
-    boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
-  },
   columnImg: {
-    padding: '1rem 1rem 2rem',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: '0 5rem',
   },
   columnForm: {
     display: 'flex',
@@ -55,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const emptyEmail = {
+  from_name: '',
   from_email: '',
   to_name: 'AnthonyTC',
   message_html: '',
@@ -62,11 +59,16 @@ const emptyEmail = {
 
 const ContactHome = () => {
   const classes = useStyles();
-  const { title, image } = ContactInfo;
+  const { title, zoom, lat, lng, googleMapsKey, userID, serviceID, templateID } = ContactInfo;
   const { wait, submit } = buttons;
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
   const [email, setEmail] = useState(emptyEmail);
+
+  const googleMapURL = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${googleMapsKey}`;
+  const containerElement = <div style={{ height: '100%' }} />;
+  const mapElement = <div style={{ height: '100%' }} />;
+  const loadingElement = <CircularProgress />;
 
   const handleChange = (e) => {
     e.persist();
@@ -80,9 +82,6 @@ const ContactHome = () => {
     setLoading(true);
     setMessage(null);
     try {
-      const userID = 'user_rNvpe3qVkqG4Htik4Ehnc';
-      const serviceID = 'gmail';
-      const templateID = 'template_portfolio_v2';
       await emailjs.send(serviceID, templateID, email, userID);
       setMessage('Thank you!');
       setEmail(emptyEmail);
@@ -100,23 +99,42 @@ const ContactHome = () => {
             {title}
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} className={classes.columnImg}>
-          <Grow in timeout={3000}>
-            <picture className={classes.picture}>
-              <img className={classes.img} src={image.location} alt={image.key} />
-            </picture>
-          </Grow>
-        </Grid>
+        <Hidden smDown>
+          <Grid item xs={12} md={6} className={classes.columnImg}>
+            <Grow in timeout={3000}>
+              <GoogleMaps
+                googleMapURL={googleMapURL}
+                containerElement={containerElement}
+                mapElement={mapElement}
+                loadingElement={loadingElement}
+                zoom={zoom}
+                lat={parseFloat(lat)}
+                lng={parseFloat(lng)}
+              />
+            </Grow>
+          </Grid>
+        </Hidden>
         <Grid item xs={12} md={6} className={classes.columnForm}>
           <form onSubmit={handleSubmit} className={classes.form}>
             <TextField
               margin="dense"
+              name="from_name"
+              variant="outlined"
+              id="from_name"
+              value={email.from_name}
+              label="your name (optional)"
+              onChange={handleChange}
+            />
+            <TextField
+              margin="dense"
+              type="email"
               name="from_email"
               variant="outlined"
               id="from_email"
               value={email.from_email}
               label="email"
               onChange={handleChange}
+              required
             />
             <TextField
               margin="dense"
@@ -128,6 +146,7 @@ const ContactHome = () => {
               value={email.message_html}
               label="type here"
               onChange={handleChange}
+              required
             />
             <Button
               className={classes.button}

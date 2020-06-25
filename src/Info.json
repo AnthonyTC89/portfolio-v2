@@ -33,10 +33,13 @@
   },
   "ContactInfo": {
     "title": "Contact me",
-    "image": {
-      "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/contact.jpg",
-      "key": "contact"
-    }
+    "zoom": 3,
+    "lat": -16.4271974,
+    "lng": -71.5243293,
+    "googleMapsKey": "AIzaSyCfGYcKrIql9GQMnNvIwxHeLg8MOUbOUIY",
+    "userID": "user_rNvpe3qVkqG4Htik4Ehnc",
+    "serviceID": "gmail",
+    "templateID": "template_portfolio_v2"
   },
   "ProjectsInfo": {
     "title": "My Projects",

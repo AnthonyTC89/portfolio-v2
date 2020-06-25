@@ -10,7 +10,7 @@ import { EducationInfo } from '../Info.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '4rem 1rem',
+    padding: '5rem 1rem',
     background: '#F2F9FF',
     textAlign: 'center',
     minHeight: window.innerHeight - 109,
