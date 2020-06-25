@@ -44,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '20rem',
     maxWidth: '90%',
   },
+  article: {
+    padding: '3rem 0',
+  },
   columnInfo: {
     display: 'flex',
     flexDirection: 'column',
@@ -84,7 +87,7 @@ const AboutHome = () => {
           </Typography>
         </Grid>
         {projects.map((item) => (
-          <Grid container key={uuidv4()} component="article" className={classes.row}>
+          <Grid container key={uuidv4()} component="article" className={classes.article}>
             <Hidden mdUp>
               <Grid item xs={12}>
                 <Typography className={classes.links} variant="h2">

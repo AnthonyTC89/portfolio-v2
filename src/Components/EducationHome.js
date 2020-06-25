@@ -44,10 +44,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '90%',
     margin: '1rem',
   },
-  columnInfo: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+  article: {
+    padding: '3rem 0',
   },
   columnImg: {
     padding: '1rem 1rem 2rem',
@@ -84,7 +82,7 @@ const EducationHome = () => {
           </Typography>
         </Grid>
         {education.map((item) => (
-          <Grid key={uuidv4()} item xs={12} md={6} component="article">
+          <Grid key={uuidv4()} item xs={12} md={6} component="article" className={classes.article}>
             <Typography variant="caption">
               {item.date}
             </Typography>
