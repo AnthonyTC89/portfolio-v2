@@ -34,7 +34,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
   },
   link: {
-    margin: '1rem',
+    margin: '0.5rem',
     alignSelf: 'center',
   },
   img: {
