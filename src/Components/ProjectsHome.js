@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AboutHome = () => {
+const ProjectsHome = () => {
   const classes = useStyles();
   const { title, projects } = ProjectsInfo;
   return (
@@ -138,4 +138,4 @@ const AboutHome = () => {
   );
 };
 
-export default AboutHome;
+export default ProjectsHome;

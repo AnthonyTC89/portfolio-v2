@@ -45,7 +45,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Banner = () => {
+const BannerHome = () => {
   const classes = useStyles();
   const { banner } = BannerInfo;
 
@@ -82,4 +82,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerHome;
