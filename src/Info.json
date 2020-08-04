@@ -55,6 +55,16 @@
         "mobile": false
       },
       {
+        "title": "Blogsite",
+        "description": "This is a Personal Project based on Instagram. The main porpuse is the security of data with JsonWebToken and sessions with localStorare and sessionStorage. This is a responsive website where an User can create an account with his email or Facebook Acoount. Create posts, edit posts and edit his profile.",
+        "live": "https://website-atc.herokuapp.com/",
+        "source": "https://github.com/AnthonyTC89/website-atc",
+        "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/blogsite/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/blogsite/develop/screenshots/02.png"],
+        "pinned": true,
+        "skills": ["HTML", "CSS", "Bootstrap", "React", "Material-UI", "Redux", "nodeJS", "MongoDB", "Heroku"],
+        "mobile": false
+      },
+      {
         "title": "Moodle-Pedagogic-School",
         "description": "This project is a Moodle for a pedagogic school in Peru. A user can create an account of a student in the website. The administrator can update the account of a user to be a professor. A professor can create courses, subjects, schedules, upload documents in the Website. A student can view the courses, subjects, schedules and download the documents. There is guest account to have a view of the courses with less options.",
         "live": "https://moodle-pedagogico.herokuapp.com/",
