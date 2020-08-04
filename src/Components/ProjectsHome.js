@@ -12,7 +12,7 @@ import { ProjectsInfo, UrlIcons } from '../Info.json';
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '5rem 1rem',
-    background: '#F2F9FF',
+    // background: '#F2F9FF',
     textAlign: 'center',
     minHeight: window.innerHeight,
   },
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     fontSize: '3em',
     margin: '1rem',
-    color: theme.palette.primary.dark,
+    // color: theme.palette.primary.dark,
   },
   links: {
     display: 'flex',

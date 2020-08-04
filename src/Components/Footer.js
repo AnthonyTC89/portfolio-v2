@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     paddingBottom: '1rem',
     bottom: 0,
     width: '100%',
-    background: '#F2F9FF',
+    // background: '#F2F9FF',
   },
   list: {
     display: 'flex',

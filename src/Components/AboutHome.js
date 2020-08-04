@@ -8,10 +8,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { AboutInfo } from '../Info.json';
 
+// eslint-disable-next-line no-unused-vars
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '5rem 1rem',
-    background: '#F2F9FF',
+    // background: '#F2F9FF',
     textAlign: 'center',
     minHeight: window.innerHeight,
   },
@@ -19,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     fontSize: '3em',
     margin: '1rem',
-    color: theme.palette.primary.dark,
+    // color: theme.palette.primary.dark,
   },
   picture: {
     width: '100%',
   },
   img: {
     width: '70%',
-    boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
+    // boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
     borderRadius: '50%',
   },
   columnText: {
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     padding: '0 2rem',
-    color: theme.palette.primary.dark,
+    // color: theme.palette.primary.dark,
   },
   listContainer: {
     display: 'flex',
@@ -96,7 +97,7 @@ const AboutHome = () => {
                 key={uuidv4()}
                 className={classes.listItem}
                 variant="outlined"
-                color="primary"
+                // color="primary"
               >
                 {skill}
               </Button>

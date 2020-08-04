@@ -21,7 +21,7 @@ import { NavbarInfo } from '../Info.json';
 
 const useStyles = makeStyles({
   root: {
-    opacity: '70%',
+    // opacity: '40%',
   },
   title: {
     flexGrow: 1,
@@ -81,7 +81,7 @@ const Navbar = ({ setComponent }) => {
               <Divider orientation="vertical" flexItem />
               <Button
                 onClick={() => handleComponent(ContactHome)}
-                color="primary"
+                // color="primary"
                 className={classes.link}
               >
                 {contact}
@@ -91,7 +91,7 @@ const Navbar = ({ setComponent }) => {
               <Divider orientation="vertical" flexItem />
               <Button
                 onClick={() => handleComponent(ProjectsHome)}
-                color="primary"
+                // color="primary"
                 className={classes.link}
               >
                 {projects}
@@ -102,13 +102,13 @@ const Navbar = ({ setComponent }) => {
               onClick={() => handleComponent(AboutHome)}
               className={classes.link}
             >
-              <HomeIcon color="primary" />
+              <HomeIcon />
             </IconButton>
             <Divider orientation="vertical" flexItem />
             <Hidden xsDown>
               <Button
                 onClick={() => handleComponent(ExperienceHome)}
-                color="primary"
+                // color="primary"
                 className={classes.link}
               >
                 {experience}
@@ -118,7 +118,7 @@ const Navbar = ({ setComponent }) => {
             <Hidden smDown>
               <Button
                 onClick={() => handleComponent(EducationHome)}
-                color="primary"
+                // color="primary"
                 className={classes.link}
               >
                 {education}
@@ -131,28 +131,28 @@ const Navbar = ({ setComponent }) => {
       <Drawer anchor="left" open={drawerOpen} onClose={() => handleClose(null)}>
         <Button
           onClick={() => handleClose(ContactHome)}
-          color="primary"
+          // color="primary"
           className={classes.link}
         >
           {contact}
         </Button>
         <Button
           onClick={() => handleClose(ProjectsHome)}
-          color="primary"
+          // color="primary"
           className={classes.link}
         >
           {projects}
         </Button>
         <Button
           onClick={() => handleClose(ExperienceHome)}
-          color="primary"
+          // color="primary"
           className={classes.link}
         >
           {experience}
         </Button>
         <Button
           onClick={() => handleClose(EducationHome)}
-          color="primary"
+          // color="primary"
           className={classes.link}
         >
           {education}

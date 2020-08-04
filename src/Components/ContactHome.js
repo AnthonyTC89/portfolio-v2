@@ -13,17 +13,18 @@ import { makeStyles } from '@material-ui/core/styles';
 import GoogleMaps from './GoogleMaps';
 import { buttons, ContactInfo } from '../Info.json';
 
+// eslint-disable-next-line no-unused-vars
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '5rem 1rem',
-    background: '#F2F9FF',
+    // background: '#F2F9FF',
     textAlign: 'center',
   },
   title: {
     fontWeight: 400,
     fontSize: '3em',
     margin: '1rem',
-    color: theme.palette.primary.dark,
+    // color: theme.palette.primary.dark,
   },
   picture: {
     width: '100%',
@@ -46,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     padding: '0 2rem',
-    color: theme.palette.success.dark,
+    // color: theme.palette.success.dark,
   },
 }));
 
