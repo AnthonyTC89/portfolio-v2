@@ -14,10 +14,20 @@ const useStyles = makeStyles((theme) => ({
     padding: '5rem 1rem',
     textAlign: 'center',
     minHeight: window.innerHeight,
+    position: 'relative',
+  },
+  background: {
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    opacity: '90%',
+    width: '100%',
+    height: '100%',
     backgroundImage: `url(${AboutInfo.background})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    zIndex: '-999',
   },
   title: {
     fontWeight: 400,
@@ -68,6 +78,7 @@ const AboutHome = () => {
   return (
     <Slide direction="up" in timeout={1000}>
       <Grid component="section" container className={classes.root}>
+        <div className={classes.background} />
         <Grid item xs={12} className={classes.columnImg}>
           <Grow in timeout={3000}>
             <picture className={classes.picture}>

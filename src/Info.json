@@ -36,6 +36,7 @@
   },
   "ProjectsInfo": {
     "title": "My Projects",
+    "background": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/bg-wall.jpg",
     "projects": [
       {
         "title": "My WebSite",
@@ -114,6 +115,7 @@
   },
   "ExperienceInfo": {
     "title": "My Work Experience",
+    "background": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/bg-wall.jpg",
     "experience": [
       {
         "date": "May 2016 - December 2018",
@@ -139,6 +141,7 @@
   },
   "EducationInfo": {
     "title": "My Education",
+    "background": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/bg-wall.jpg",
     "education" : [
       {
         "date": "July 2019 - Abril 2020",
@@ -162,6 +165,7 @@
     "authorName": "AnthonyTC89",
     "authorUrl": "https://github.com/AnthonyTC89",
     "copyright": "All Rights Reserved.",
+    "background": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/bg-wall.jpg",
     "socialNetworks": [
       {
         "name": "facebook",

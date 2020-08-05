@@ -12,15 +12,26 @@ import { ProjectsInfo, UrlIcons } from '../Info.json';
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '5rem 1rem',
-    // background: '#F2F9FF',
     textAlign: 'center',
     minHeight: window.innerHeight,
+  },
+  background: {
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    opacity: '90%',
+    width: '100%',
+    height: '100%',
+    backgroundImage: `url(${ProjectsInfo.background})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    zIndex: '-999',
   },
   title: {
     fontWeight: 400,
     fontSize: '3em',
     margin: '1rem',
-    // color: theme.palette.primary.dark,
   },
   links: {
     display: 'flex',
@@ -81,6 +92,7 @@ const ProjectsHome = () => {
   return (
     <Slide direction="up" in timeout={1000}>
       <Grid component="section" container className={classes.root}>
+        <div className={classes.background} />
         <Grid item xs={12}>
           <Typography className={classes.title} variant="h2">
             {title}
