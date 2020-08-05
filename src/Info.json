@@ -3,7 +3,7 @@
     "about" : {
       "title": "Anthony Tapia",
       "subtitle": "Full Stack Developer",
-      "text": "Full Stack Web Developer with 3+ years of experience working with a variety of back-end technologies seeking my next remote opportunity. Driven to help people make their lives or businesses easier, I thrive working on new challenges, knowing that everything can be achieved step-by-step. When I'm not coding, you can find me reading a book or playing a guitar.",
+      "text": "Hello! My name is Anthony Tapia, I'm from Perú. I like to work remotely on projects for people all over the world making their lives or businesses easier. I have a diverse set of skills in Front-end and Back-end. I'm always looking for my next challenge, knowing that everything is possible working step-by-step. When I'm not coding, you can find me reading a book or playing guitar.",
       "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/gravatar.png",
       "key": "anthony-tapia"
     },
@@ -32,7 +32,7 @@
     "userID": "user_rNvpe3qVkqG4Htik4Ehnc",
     "serviceID": "gmail",
     "templateID": "template_portfolio_v2",
-    "background": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/bg-notebook.jpg"
+    "background": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/bg-wall.jpg"
   },
   "ProjectsInfo": {
     "title": "My Projects",
@@ -49,7 +49,7 @@
       },
       {
         "title": "Blogsite",
-        "description": "This is a Personal Project based on Instagram. The main porpuse is the security of data with JsonWebToken and sessions with localStorare and sessionStorage. This is a responsive website where an User can create an account with his email or Facebook Acoount. Create posts, edit posts and edit his profile.",
+        "description": "his is a Personal Project based on Instagram. The main purpose is the security of data with JsonWebToken and sessions with localStorage and sessionStorage. This is a responsive website where an User can create an account with his email or Facebook Account. Create posts, edit posts and edit his profile.",
         "live": "https://website-atc.herokuapp.com/",
         "source": "https://github.com/AnthonyTC89/website-atc",
         "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/blogsite/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/blogsite/develop/screenshots/02.png"],

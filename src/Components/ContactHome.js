@@ -16,12 +16,22 @@ import { buttons, ContactInfo } from '../Info.json';
 // eslint-disable-next-line no-unused-vars
 const useStyles = makeStyles((theme) => ({
   root: {
+    position: 'relative',
     padding: '5rem 1rem',
     textAlign: 'center',
+  },
+  background: {
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    opacity: '80%',
+    width: '100%',
+    height: '100%',
     backgroundImage: `url(${ContactInfo.background})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    zIndex: '-999',
   },
   title: {
     fontWeight: 400,
@@ -96,6 +106,7 @@ const ContactHome = () => {
   return (
     <Slide direction="up" in timeout={1000}>
       <Grid component="section" container className={classes.root}>
+        <div className={classes.background} />
         <Grid item xs={12}>
           <Typography className={classes.title} variant="h2">
             {title}
@@ -139,7 +150,7 @@ const ContactHome = () => {
               className={classes.button}
               type="submit"
               variant="contained"
-              color="primary"
+              color="inherit"
               disabled={loading}
             >
               {loading ? wait : submit}
