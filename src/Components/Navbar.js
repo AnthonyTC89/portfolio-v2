@@ -25,6 +25,7 @@ const useStyles = makeStyles({
   root: {
     flexDirection: 'row-reverse',
     justifyContent: 'space-between',
+    background: 'whitesmoke',
   },
   title: {
     flexGrow: 1,
