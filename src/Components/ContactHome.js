@@ -17,14 +17,16 @@ import { buttons, ContactInfo } from '../Info.json';
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '5rem 1rem',
-    // background: '#F2F9FF',
     textAlign: 'center',
+    backgroundImage: `url(${ContactInfo.background})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
   },
   title: {
     fontWeight: 400,
     fontSize: '3em',
     margin: '1rem',
-    // color: theme.palette.primary.dark,
   },
   picture: {
     width: '100%',
@@ -47,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     padding: '0 2rem',
-    // color: theme.palette.success.dark,
   },
 }));
 
@@ -100,21 +101,6 @@ const ContactHome = () => {
             {title}
           </Typography>
         </Grid>
-        <Hidden smDown>
-          <Grid item xs={12} md={6} className={classes.columnImg}>
-            <Grow in timeout={3000}>
-              <GoogleMaps
-                googleMapURL={googleMapURL}
-                containerElement={containerElement}
-                mapElement={mapElement}
-                loadingElement={loadingElement}
-                zoom={zoom}
-                lat={parseFloat(lat)}
-                lng={parseFloat(lng)}
-              />
-            </Grow>
-          </Grid>
-        </Hidden>
         <Grid item xs={12} md={6} className={classes.columnForm}>
           <form onSubmit={handleSubmit} className={classes.form}>
             <TextField
@@ -165,6 +151,21 @@ const ContactHome = () => {
             )}
           </form>
         </Grid>
+        <Hidden smDown>
+          <Grid item xs={12} md={6} className={classes.columnImg}>
+            <Grow in timeout={3000}>
+              <GoogleMaps
+                googleMapURL={googleMapURL}
+                containerElement={containerElement}
+                mapElement={mapElement}
+                loadingElement={loadingElement}
+                zoom={zoom}
+                lat={parseFloat(lat)}
+                lng={parseFloat(lng)}
+              />
+            </Grow>
+          </Grid>
+        </Hidden>
       </Grid>
     </Slide>
   );

@@ -23,17 +23,6 @@
     },
     "resume": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/Resume+Anthony.pdf"
   },
-  "BannerInfo": {
-    "title": "Banner section",
-    "banner": {
-      "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/banner.jpg",
-      "key": "banner",
-      "title": "",
-      "subtitle": "",
-      "caption": "",
-      "body": ""
-    }
-  },
   "ContactInfo": {
     "title": "Contact me",
     "zoom": 3,
@@ -42,7 +31,8 @@
     "googleMapsKey": "AIzaSyCfGYcKrIql9GQMnNvIwxHeLg8MOUbOUIY",
     "userID": "user_rNvpe3qVkqG4Htik4Ehnc",
     "serviceID": "gmail",
-    "templateID": "template_portfolio_v2"
+    "templateID": "template_portfolio_v2",
+    "background": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/bg-notebook.jpg"
   },
   "ProjectsInfo": {
     "title": "My Projects",
