@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import DownloadIcon from '@material-ui/icons/GetApp';
 import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -12,6 +13,7 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import HomeIcon from '@material-ui/icons/Home';
 import Hidden from '@material-ui/core/Hidden';
+import Link from '@material-ui/core/Link';
 import AboutHome from './AboutHome';
 import ContactHome from './ContactHome';
 import ProjectsHome from './ProjectsHome';
@@ -21,7 +23,8 @@ import { NavbarInfo } from '../Info.json';
 
 const useStyles = makeStyles({
   root: {
-    // opacity: '40%',
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
   },
   title: {
     flexGrow: 1,
@@ -47,7 +50,7 @@ const useStyles = makeStyles({
 
 const Navbar = ({ setComponent }) => {
   const classes = useStyles();
-  const { contact, experience, projects, education } = NavbarInfo;
+  const { contact, experience, projects, education, resume } = NavbarInfo;
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleComponent = (Component) => {
@@ -63,25 +66,13 @@ const Navbar = ({ setComponent }) => {
 
   return (
     <>
-      <AppBar position="fixed" className={classes.root} color="inherit">
-        <Toolbar>
-          <Hidden mdUp>
-            <IconButton
-              color="primary"
-              aria-label="open drawer"
-              onClick={() => setDrawerOpen(!drawerOpen)}
-              edge="start"
-              className={classes.drawer}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
+      <AppBar position="fixed" color="inherit">
+        <Toolbar className={classes.root}>
           <Grid container className={classes.container}>
             <Hidden smDown>
               <Divider orientation="vertical" flexItem />
               <Button
                 onClick={() => handleComponent(ContactHome)}
-                // color="primary"
                 className={classes.link}
               >
                 {contact}
@@ -91,7 +82,6 @@ const Navbar = ({ setComponent }) => {
               <Divider orientation="vertical" flexItem />
               <Button
                 onClick={() => handleComponent(ProjectsHome)}
-                // color="primary"
                 className={classes.link}
               >
                 {projects}
@@ -108,7 +98,6 @@ const Navbar = ({ setComponent }) => {
             <Hidden xsDown>
               <Button
                 onClick={() => handleComponent(ExperienceHome)}
-                // color="primary"
                 className={classes.link}
               >
                 {experience}
@@ -118,7 +107,6 @@ const Navbar = ({ setComponent }) => {
             <Hidden smDown>
               <Button
                 onClick={() => handleComponent(EducationHome)}
-                // color="primary"
                 className={classes.link}
               >
                 {education}
@@ -126,33 +114,44 @@ const Navbar = ({ setComponent }) => {
               <Divider orientation="vertical" flexItem />
             </Hidden>
           </Grid>
+          <Link href={resume} target="_blank" rel="noopener">
+            <IconButton>
+              <DownloadIcon />
+            </IconButton>
+          </Link>
+          <Hidden mdUp>
+            <IconButton
+              aria-label="open drawer"
+              onClick={() => setDrawerOpen(!drawerOpen)}
+              edge="start"
+              className={classes.drawer}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
         </Toolbar>
       </AppBar>
       <Drawer anchor="left" open={drawerOpen} onClose={() => handleClose(null)}>
         <Button
           onClick={() => handleClose(ContactHome)}
-          // color="primary"
           className={classes.link}
         >
           {contact}
         </Button>
         <Button
           onClick={() => handleClose(ProjectsHome)}
-          // color="primary"
           className={classes.link}
         >
           {projects}
         </Button>
         <Button
           onClick={() => handleClose(ExperienceHome)}
-          // color="primary"
           className={classes.link}
         >
           {experience}
         </Button>
         <Button
           onClick={() => handleClose(EducationHome)}
-          // color="primary"
           className={classes.link}
         >
           {education}

@@ -18,7 +18,8 @@
     "logo": {
       "location": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/logo.png",
       "key": "portfolio-logo"
-    }
+    },
+    "resume": "https://portfolio-atc.s3-sa-east-1.amazonaws.com/Resume+Anthony.pdf"
   },
   "BannerInfo": {
     "title": "Banner section",
