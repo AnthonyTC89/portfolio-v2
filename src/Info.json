@@ -50,7 +50,7 @@
       },
       {
         "title": "Blogsite",
-        "description": "his is a Personal Project based on Instagram. The main purpose is the security of data with JsonWebToken and sessions with localStorage and sessionStorage. This is a responsive website where an User can create an account with his email or Facebook Account. Create posts, edit posts and edit his profile.",
+        "description": "This is a Personal Project based on Instagram. The main purpose is the security of data with JsonWebToken and sessions with localStorage and sessionStorage. This is a responsive website where an User can create an account with his email or Facebook Account. Create posts, edit posts and edit his profile.",
         "live": "https://website-atc.herokuapp.com/",
         "source": "https://github.com/AnthonyTC89/website-atc",
         "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/blogsite/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/blogsite/develop/screenshots/02.png"],
