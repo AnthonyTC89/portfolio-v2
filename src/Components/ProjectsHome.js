@@ -9,11 +9,13 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { ProjectsInfo, UrlIcons } from '../Info.json';
 
+// eslint-disable-next-line no-unused-vars
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '5rem 1rem',
     textAlign: 'center',
     minHeight: window.innerHeight,
+    position: 'relative',
   },
   background: {
     position: 'absolute',
@@ -23,9 +25,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '100%',
     backgroundImage: `url(${ProjectsInfo.background})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
     zIndex: '-999',
   },
   title: {
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   img: {
-    boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
+    boxShadow: '0px 10px 15px 5px gray',
     maxHeight: '20rem',
     maxWidth: '90%',
   },
