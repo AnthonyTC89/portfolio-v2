@@ -13,7 +13,20 @@ const useStyles = makeStyles({
     paddingBottom: '1rem',
     bottom: 0,
     width: '100%',
-    // background: '#F2F9FF',
+    position: 'relative',
+  },
+  background: {
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    opacity: '90%',
+    width: '100%',
+    height: '100%',
+    backgroundImage: `url(${FooterInfo.background})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    zIndex: '-999',
   },
   list: {
     display: 'flex',
@@ -34,6 +47,7 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
       <CssBaseline />
+      <div className={classes.background} />
       {socialNetworks.length === 0 ? null : (
         <div className={classes.list}>
           {socialNetworks.map((item) => (
@@ -49,10 +63,10 @@ const Footer = () => {
         </div>
       )}
       <Container maxWidth="sm">
-        <Typography variant="body2" color="textSecondary" align="center">
+        <Typography variant="body2" align="center">
           {`${year} © ${authorName}` }
         </Typography>
-        <Typography variant="body2" color="textSecondary" align="center">
+        <Typography variant="body2" align="center">
           {copyright}
         </Typography>
       </Container>
