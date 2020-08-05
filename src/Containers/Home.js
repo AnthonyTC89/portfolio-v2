@@ -11,7 +11,7 @@ const Home = () => {
       <main>
         {Component}
       </main>
-      <Footer />
+      {Component.type.name === 'AboutHome' ? null : <Footer />}
     </>
   );
 };

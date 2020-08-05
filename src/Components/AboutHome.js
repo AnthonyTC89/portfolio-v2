@@ -12,41 +12,35 @@ import { AboutInfo } from '../Info.json';
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '5rem 1rem',
-    // background: '#F2F9FF',
     textAlign: 'center',
     minHeight: window.innerHeight,
+    backgroundImage: `url(${AboutInfo.background})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
   },
   title: {
     fontWeight: 400,
     fontSize: '3em',
-    margin: '1rem',
-    // color: theme.palette.primary.dark,
+    color: 'lightgray',
+  },
+  subtitle: {
+    fontWeight: 400,
+    color: 'lightgray',
   },
   picture: {
     width: '100%',
   },
   img: {
-    width: '70%',
-    // boxShadow: `0px 10px 15px 0px ${theme.palette.primary.main}`,
+    width: '6rem',
+    boxShadow: '0px 10px 10px 0px gray',
     borderRadius: '50%',
-  },
-  columnText: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  columnImg: {
-    padding: '1rem 1rem 2rem',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   text: {
     textAlign: 'center',
     padding: '0 2rem',
-    // color: theme.palette.primary.dark,
+    margin: '8rem auto 4rem auto',
+    color: 'lightgray',
   },
   listContainer: {
     display: 'flex',
@@ -56,14 +50,14 @@ const useStyles = makeStyles((theme) => ({
     width: '90%',
   },
   list: {
-    width: '80%',
     margin: '1rem auto',
   },
   listItem: {
     margin: '0.2rem 0.2rem',
-    border: '1px solid #052369',
+    border: '1px solid black',
     padding: '0.3rem 0.5rem',
     borderRadius: '4px',
+    color: 'white',
   },
 }));
 
@@ -74,21 +68,21 @@ const AboutHome = () => {
   return (
     <Slide direction="up" in timeout={1000}>
       <Grid component="section" container className={classes.root}>
-        <Grid item xs={12} md={6} className={classes.columnImg}>
+        <Grid item xs={12} className={classes.columnImg}>
           <Grow in timeout={3000}>
             <picture className={classes.picture}>
               <img className={classes.img} src={about.location} alt={about.key} />
             </picture>
           </Grow>
         </Grid>
-        <Grid item xs={12} md={6} className={classes.columnText}>
+        <Grid item xs={12}>
           <Typography className={classes.title} variant="h2">
             {about.title}
           </Typography>
-          <Typography
-            className={classes.text}
-            component="article"
-          >
+          <Typography className={classes.subtitle} variant="h6">
+            {about.subtitle}
+          </Typography>
+          <Typography className={classes.text}>
             {about.text}
           </Typography>
           <div className={classes.list}>
@@ -97,7 +91,6 @@ const AboutHome = () => {
                 key={uuidv4()}
                 className={classes.listItem}
                 variant="outlined"
-                // color="primary"
               >
                 {skill}
               </Button>
