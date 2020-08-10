@@ -49,6 +49,16 @@
         "mobile": false
       },
       {
+        "title": "Chat app - Websockets",
+        "description": "This is a Personal Project where the main purpose is know basics about socket.io with React and NodeJS. This is a responsive website where an User can join in a public chat and share text between other users connected.",
+        "live": "https://chat-app-atc.herokuapp.com/",
+        "source": "https://github.com/AnthonyTC89/chat-app",
+        "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/chat-app/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/blogsite/chat-app/screenshots/02.png"],
+        "pinned": true,
+        "skills": ["HTML", "CSS", "Bootstrap", "React", "Redux", "nodeJS", "Heroku"],
+        "mobile": false
+      },
+      {
         "title": "Blogsite",
         "description": "This is a Personal Project based on Instagram. The main purpose is the security of data with JsonWebToken and sessions with localStorage and sessionStorage. This is a responsive website where an User can create an account with his email or Facebook Account. Create posts, edit posts and edit his profile.",
         "live": "https://website-atc.herokuapp.com/",
