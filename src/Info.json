@@ -53,7 +53,7 @@
       },
       {
         "title": "Razorpay - Payment App",
-        "description": "This is a Personal Project where the main purpose is know basics about the payment service with Razoray using React and NodeJS. It's very usuful in Indian companies",
+        "description": "This is a Personal Project where the main purpose is know basics about the payment service with Razoray using React and NodeJS. It's very useful for Indian companies",
         "live": "https://razorpay-demo-atc.herokuapp.com/",
         "source": "https://github.com/AnthonyTC89/razorpay-demo",
         "screenshots": ["https://raw.githubusercontent.com/AnthonyTC89/razorpay-demo/develop/screenshots/01.png", "https://raw.githubusercontent.com/AnthonyTC89/razorpay-demo/screenshots/02.png"],
