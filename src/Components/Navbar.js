@@ -37,9 +37,13 @@ const useStyles = makeStyles({
     transform: 'translate(-50%, -50%)',
     justifyContent: 'center',
   },
-  link: {
+  navItem: {
     margin: '0.5rem',
     alignSelf: 'center',
+  },
+  link: {
+    color: 'rgba(0, 0, 0, 0.87)',
+    fontSize: '0.8rem',
   },
   img: {
     width: '2rem',
@@ -74,7 +78,7 @@ const Navbar = ({ setComponent }) => {
               <Divider orientation="vertical" flexItem />
               <Button
                 onClick={() => handleComponent(ContactHome)}
-                className={classes.link}
+                className={classes.navItem}
               >
                 {contact}
               </Button>
@@ -83,7 +87,7 @@ const Navbar = ({ setComponent }) => {
               <Divider orientation="vertical" flexItem />
               <Button
                 onClick={() => handleComponent(ProjectsHome)}
-                className={classes.link}
+                className={classes.navItem}
               >
                 {projects}
               </Button>
@@ -91,7 +95,7 @@ const Navbar = ({ setComponent }) => {
             <Divider orientation="vertical" flexItem />
             <IconButton
               onClick={() => handleComponent(AboutHome)}
-              className={classes.link}
+              className={classes.navItem}
             >
               <HomeIcon />
             </IconButton>
@@ -99,7 +103,7 @@ const Navbar = ({ setComponent }) => {
             <Hidden xsDown>
               <Button
                 onClick={() => handleComponent(ExperienceHome)}
-                className={classes.link}
+                className={classes.navItem}
               >
                 {experience}
               </Button>
@@ -108,14 +112,21 @@ const Navbar = ({ setComponent }) => {
             <Hidden smDown>
               <Button
                 onClick={() => handleComponent(EducationHome)}
-                className={classes.link}
+                className={classes.navItem}
               >
                 {education}
               </Button>
               <Divider orientation="vertical" flexItem />
             </Hidden>
           </Grid>
-          <Link href={resume} target="_blank" rel="noopener">
+          <Link href={resume.href} target="_blank" rel="noopener" underline="none">
+            <Hidden xsDown>
+              <Button
+                className={classes.link}
+              >
+                {resume.text}
+              </Button>
+            </Hidden>
             <IconButton>
               <DownloadIcon />
             </IconButton>
